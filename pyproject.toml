@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Flask app"
+authors = ["fatfry <fatfry@mail.ru>"]
+readme = "README.md"
+packages = [{include="page_analyzer"},]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.3"
+load-dotenv = "^0.1.0"
+flake8 = "^7.1.0"
+gunicorn = "^22.0.0"
+psycopg2-binary = "^2.9.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

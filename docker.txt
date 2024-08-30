@@ -1,0 +1,13 @@
+#список контейнеров
+sudo docker ps -a
+
+sudo docker run -d \
+    --name my_first_db \
+    -e POSTGRES_USER=pguser \
+    -e POSTGRES_PASSWORD=pgpass \
+    -e POSTGRES_DB=pgdb \
+    -p 5432:5432 \
+    postgres:latest
+
+docker exec -it my_first_db psql -U pguser -d pgdb
+sudo docker start my_first_db
